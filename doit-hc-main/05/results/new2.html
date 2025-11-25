@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>간단 게시판</title>
+    <style>
+        /* CSS 코드는 아래 2번 섹션에 상세 설명되어 있습니다. */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f9fc;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .board-container {
+            width: 800px;
+            max-width: 95%;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+        }
+
+        .board-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .board-header h2 {
+            color: #333;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .write-button {
+            background-color: #28a745; /* 녹색 */
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .write-button:hover {
+            background-color: #1e7e34;
+        }
+
+        .board-table {
+            width: 100%;
+            border-collapse: collapse; /* 테이블 경계선 합치기 */
+            font-size: 14px;
+        }
+
+        .board-table th, .board-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .board-table th {
+            background-color: #f1f1f1;
+            color: #555;
+            font-weight: 600;
+        }
+
+        .board-table tr:hover {
+            background-color: #fafafa; /* 마우스 오버 시 색상 변경 */
+        }
+        
+        .board-table td:nth-child(2) {
+            /* 제목 컬럼 스타일 */
+            font-weight: 500;
+            color: #333;
+        }
+
+        .board-table a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .board-table a:hover {
+            color: #007bff; /* 제목에 호버 시 파란색으로 변경 */
+        }
+
+        .board-table .date {
+            color: #999;
+            font-size: 12px;
+        }
+
+        /* Pagination (페이지네이션) 스타일 */
+        .pagination {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .pagination a {
+            display: inline-block;
+            padding: 8px 12px;
+            margin: 0 3px;
+            text-decoration: none;
+            color: #555;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .pagination a.active {
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+        }
+
+        .pagination a:not(.active):hover {
+            background-color: #e2e6ea;
+        }
+    </style>
+</head>
+<body>
+    <div class="board-container">
+        <div class="board-header">
+            <h2>자유 게시판</h2>
+            <a href="#" class="write-button">글쓰기</a>
+        </div>
+        
+        <table class="board-table">
+            <thead>
+                <tr>
+                    <th style="width: 10%;">번호</th>
+                    <th style="width: 60%;">제목</th>
+                    <th style="width: 15%;">작성자</th>
+                    <th style="width: 15%;">작성일</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>5</td>
+                    <td><a href="#">새로운 게시판 디자인이 정말 깔끔하네요!</a></td>
+                    <td>홍길동</td>
+                    <td class="date">2025.11.25</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><a href="#">오늘 날씨가 정말 좋아서 기분이 상쾌합니다.</a></td>
+                    <td>김개발</td>
+                    <td class="date">2025.11.24</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><a href="#">프론트엔드 공부 시작했는데, 재밌네요!</a></td>
+                    <td>이철수</td>
+                    <td class="date">2025.11.23</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="#">간단한 로그인 창 예제 감사합니다!</a></td>
+                    <td>박영희</td>
+                    <td class="date">2025.11.22</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><a href="#">게시판에 첫 글을 작성해 봅니다.</a></td>
+                    <td>관리자</td>
+                    <td class="date">2025.11.21</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a href="#" class="active">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">&raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

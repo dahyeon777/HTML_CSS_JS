@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>심플 로그인</title>
+    <style>
+      /* CSS 코드는 아래 2번 섹션을 참고하세요 */
+      /* 이 부분에 CSS 코드를 직접 삽입합니다 */
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f4f9; /* 배경색 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      .login-container {
+        background-color: #ffffff; /* 컨테이너 배경색 */
+        padding: 40px;
+        border-radius: 12px; /* 모서리 둥글게 */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* 은은한 그림자 */
+        width: 300px;
+        text-align: center;
+      }
+
+      .login-container h2 {
+        margin-bottom: 30px;
+        color: #333;
+        font-weight: 600;
+      }
+
+      .input-group {
+        margin-bottom: 20px;
+        text-align: left;
+      }
+
+      .input-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: #555;
+      }
+
+      .input-group input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-sizing: border-box; /* 패딩이 너비에 포함되도록 설정 */
+        transition: border-color 0.3s;
+      }
+
+      .input-group input:focus {
+        border-color: #007bff; /* 포커스 시 색상 변경 */
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+      }
+
+      .login-button {
+        width: 100%;
+        padding: 12px;
+        background-color: #007bff; /* 버튼 배경색 */
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.1s;
+      }
+
+      .login-button:hover {
+        background-color: #0056b3; /* 호버 시 색상 변경 */
+      }
+
+      .login-button:active {
+        transform: translateY(1px); /* 클릭 시 살짝 눌리는 효과 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>로그인</h2>
+      <form>
+        <div class="input-group">
+          <label for="username">아이디</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="아이디를 입력하세요"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="password">비밀번호</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="비밀번호를 입력하세요"
+            required
+          />
+        </div>
+        <button type="submit" class="login-button">로그인</button>
+      </form>
+    </div>
+  </body>
+</html>
