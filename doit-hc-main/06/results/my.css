@@ -1,0 +1,19 @@
+/* p {
+  font-style: italic;
+}
+.accent {
+  font-weight: bold;
+  color: blue;
+}
+#accent2 {
+  background-color: #222;
+  color: white;
+} */
+
+div{
+    color: red;
+}
+
+p{
+    color: black;
+}

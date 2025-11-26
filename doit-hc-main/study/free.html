@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>HTML 기초 요소 연습 폼</h1>
+    <p>
+      CSS/JavaScript 없이, 순수 HTML 태그만으로 다양한 입력 요소를 테스트합니다.
+    </p>
+    <hr />
+
+    <form>
+      <fieldset>
+        <legend>📝 기본 정보 입력</legend>
+
+        <p>
+          <label for="user_id1">아이디: </label>
+          <input
+            type="text"
+            id="user_id1"
+            name="name"
+            placeholder="5자 이상 입력"
+            required
+          />
+        </p>
+
+        <p>
+          <label for="user_password1">비밀번호: </label>
+          <input type="password" id="password" name="password" required />
+        </p>
+
+        <p>
+          <label for="user_email1">이메일: </label>
+          <input type="email" id="user_email1" name="name" required />
+        </p>
+      </fieldset>
+
+      <hr />
+
+      <fieldset>
+        <legend>✅ 선택 요소 연습</legend>
+
+        <h3>1. 성별 (라디오 버튼 - **단일 선택**)</h3>
+
+        <input type="radio" id="gender_mail1" name="gender1" value="male1" />
+        <label for="gender_mail1">남자</label>
+
+        <input
+          type="radio"
+          id="gender_female1"
+          name="gender1"
+          value="femail1"
+        />
+        <label for="gender_female">여자</label>
+
+        <h3>2. 관심 분야 (체크박스 - **다중 선택**)</h3>
+
+        <input type="checkbox" id="lang1" name="lang_choose1" value="1" />
+        <label for="lang1">HTML</label>
+        <input type="checkbox" id="lang2" name="lang_choose1" value="2" />
+        <label for="lang2">CSS</label>
+        <input type="checkbox" id="lang3" name="lang_choose1" value="3" />
+        <label for="lang3">JavaScript</label>
+
+        <h3>3. 선호 언어 (드롭다운 목록)</h3>
+ 3`1`2   2WQSW21Q   `   Q1WERTYUIOP[]\
+';LKJHGFDSA'     </fieldset>
+    </form>
+  </body>
+</html>
